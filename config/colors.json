@@ -1,0 +1,21 @@
+{
+    "--t-primary": "#243025",
+    "--t-secondary": "#424A3F",
+    "--t-secondary-2": "#05AD6D",
+    "--t-tertiary": "#FFFFFF",
+    "--t-faded": "#DCDCDC",
+    "--t-disabled": "#A7AEAF",
+    "--t-success": "#2CB978",
+    "--t-error": "#EB0000",
+    "--t-disabled-2": "#49B59F",
+    "--bgr-primary": "#FFFFFF",
+    "--bgr-secondary": "#222422",
+    "--bgr-tertiary-faded": "#D5E4DD",
+    "--bgr-tertiary": "#05AD6D",
+    "--bgr-faded": "#F8F8F8",
+    "--bgr-error": "#FFCCCC",
+    "--bgr-disabled": "#D7D7D7",
+    "--br-primary": "#49B59F",
+    "--br-secondary": "#DCDCDC",
+    "--br-disabled": "#BCBFBA"
+}

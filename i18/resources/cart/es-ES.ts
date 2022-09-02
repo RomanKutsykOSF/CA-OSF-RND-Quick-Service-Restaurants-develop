@@ -1,0 +1,15 @@
+export default {
+    title: "Tus ordenes",
+    backCtaText: "Espalda",
+    itemsTotalSuffixSingle: "articulo",
+    itemsTotalSuffixMultiple: "artículos",
+    removeItem: "Retirar",
+    total: "Total",
+    subtotal: "Total parcial",
+    deliveryFee: "Gastos de envío",
+    checkoutText: "Verificar",
+    emptyCart: "Tu carrito está vacío",
+    continueShopping: "Continuar comprando",
+    totalTaxText: "Total impuesto",
+    pageTitle: "Your order",
+};

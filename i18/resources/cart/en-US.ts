@@ -1,0 +1,15 @@
+export default {
+    title: "Your order",
+    backCtaText: "Back",
+    itemsTotalSuffixSingle: "item",
+    itemsTotalSuffixMultiple: "items",
+    removeItem: "Remove",
+    total: "Total",
+    subtotal: "Subtotal",
+    deliveryFee: "Delivery fee",
+    checkoutText: "Checkout",
+    emptyCart: "Your cart is empty",
+    continueShopping: "Continue shopping",
+    totalTaxText: "Total Tax",
+    pageTitle: "Your order",
+};

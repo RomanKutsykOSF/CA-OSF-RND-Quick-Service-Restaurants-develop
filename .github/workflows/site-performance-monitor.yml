@@ -1,0 +1,37 @@
+name: Run Lighthouse Audit
+
+on:
+  schedule:
+    - cron:  '5 4 * * 1,4'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+    env:
+      VERCEL_JWT: $(curl -s -D - -o /dev/null -X POST -d "_vercel_password=graduatedM1lk" https://dev.myosf.shop | grep -i Set-Cookie | grep _vercel_jwt | awk {'print $2'})
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 14
+        registry-url: https://npm.pkg.github.com/
+        scope: '@osfdigital'
+    - name: Install OSF lighthouse tool
+      run: |
+        npm install @osfdigital/osf-lighthouse-tool -g
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.projectGithubToken }}
+    - name: Waking Up Sandbox
+      run: |
+        osf-lighthouse-tool --url=https://dev.myosf.shop/ --password=${{env.VERCEL_JWT}} --authMethod=Vercel --wakeup
+    - name: Auditing Homepage
+      run: |
+        osf-lighthouse-tool --url=https://dev.myosf.shop/ --password=${{env.VERCEL_JWT}} --authMethod=Vercel --reportEndpointUrl=https://perfdata.osf.digital/api/addLighthouseAudit  --projectId=QSRST --pageId=Homepage --brandId=QSRHeadless --instanceType=development --apiAuthToken=${{ secrets.performanceMonitorKey }}
+    - name: Auditing PDP
+      run: |
+        osf-lighthouse-tool --url=https://dev.myosf.shop/product/chicken-pasta-medium/Chicken-Pasta --password=${{env.VERCEL_JWT}} --authMethod=Vercel --reportEndpointUrl=https://perfdata.osf.digital/api/addLighthouseAudit  --projectId=QSRST --pageId=PDP --brandId=QSRHeadless --instanceType=development --apiAuthToken=${{ secrets.performanceMonitorKey }}

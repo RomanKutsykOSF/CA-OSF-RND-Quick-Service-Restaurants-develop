@@ -1,0 +1,17 @@
+export default {
+    title: "Change password",
+    btn1Text: "Confirm password change",
+    passwordText: "Password",
+    confirmPasswordText: "Confirm password",
+    oldPasswordError: "Current password is incorrect",
+    passwordUpdateSuccess: "Password updated successfully",
+    currentPasswordLabel: "Current password",
+    newPasswordLabel: "New password",
+    newPasswordConfirmLabel: "Confirm new password",
+    pageTitle: "Change password",
+    passwordTooShort: "Password length must be at least 8 characters long",
+    passwordRequired: "This field is required",
+    currentPasswordPlaceholder: "Enter current password",
+    newPasswordPlaceholder: "Enter new password",
+    newPasswordConfirmPlaceholder: "Confirm new password",
+};

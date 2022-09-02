@@ -1,0 +1,15 @@
+export default {
+    orderStatusTitle: "Order Status",
+    orderNumberText: "Order Number",
+    orderStatusText: "Order Status",
+    paymentStatusText: "Payment Status",
+    orderDateText: "Order Date",
+    storeNameText: "Store Name",
+    storeIdText: "Store ID",
+    shippingStatusText: "Shipping Status",
+    totalTaxText: "Total Tax",
+    quantityText: "Quantity",
+    deliveryFeeText: "Delivery fee",
+    subtotalText: "Subtotal",
+    orderTotalText: "Total",
+};
